@@ -1,9 +1,13 @@
 package com.example.crud.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "item_pedido")
+@Getter
+@Setter
 public class ItemPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,29 +18,9 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(name = "pedido_id")
-    private ItemPedido itemPedido;
+    private Pedido pedido;
 
     @ManyToOne
     @JoinColumn(name = "produto_id")
     private Produto produto;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public ItemPedido() {
-
-    }
 }
