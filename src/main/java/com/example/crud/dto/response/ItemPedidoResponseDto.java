@@ -13,8 +13,8 @@ import java.util.List;
 public class ItemPedidoResponseDto {
     private long id;
     private Integer quantidade;
-    private Pedido pedidos;
-    private Pedido produtos;
+    private List<Pedido> pedidos;
+    private List<Produto> produtos;
 
     public ItemPedidoResponseDto () {
 

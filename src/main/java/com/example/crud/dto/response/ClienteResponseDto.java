@@ -12,7 +12,7 @@ import java.util.List;
 public class ClienteResponseDto {
     private Long id;
     private String nome;
-    private List<Pedido> pedidos;
+//    private List<Pedido> pedidos;
 
     public ClienteResponseDto () {
 

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,6 +20,6 @@ public class Cliente {
     private String nome;
 
     @OneToMany(mappedBy = "cliente")
-    private Set<Pedido> pedidos;
+    private List<Pedido> pedidos;
 
 }
